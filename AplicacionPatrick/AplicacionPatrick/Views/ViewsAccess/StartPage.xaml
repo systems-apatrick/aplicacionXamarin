@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicacionPatrick.Views.ViewsAccess.StartPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="0">
+                    <Image Source="@drawable/images" HeightRequest="180" WidthRequest="200"/> 
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="1">
+                    <Label Text="Bienvenido" TextColor="Black" FontSize="16" FontAttributes="None" HorizontalTextAlignment="Center"/>
+                    <Label Text="APATRICK" TextColor="Black" FontSize="15" FontAttributes="None" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="2" Spacing="10">
+                    
+                    <Button Text="Regitrar" 
+                            CornerRadius="30" 
+                            WidthRequest="185" 
+                            TextColor="White" 
+                            FontAttributes="Bold" 
+                            BorderColor="#2b3c3c"  
+                            BackgroundColor="Green" 
+                            FontSize="10"
+                            BorderWidth="1"
+                            Clicked="RegisterNav_Clicked"/>
+
+                    <Button 
+                        Text="Add animal" 
+                        FontAttributes="Bold" 
+                        BackgroundColor="#4ba862" 
+                        BorderRadius="35" 
+                        TextColor="White" 
+                        HorizontalOptions="End" 
+                        WidthRequest="160" 
+                        Margin="0,0,20,22" 
+                        VerticalOptions="End"/>
+
+                    <Frame BackgroundColor="Aqua">
+                        <Button Text="No tienes una Cuenta?" HeightRequest="35" WidthRequest="185" TextColor="White" BackgroundColor="Green" FontSize="10"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="4">
+                    <Label Text="Derechos Reservados 2021" TextColor="#3333" FontSize="10" HorizontalOptions="Center"/>
+                </StackLayout>
+            </Grid>
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
