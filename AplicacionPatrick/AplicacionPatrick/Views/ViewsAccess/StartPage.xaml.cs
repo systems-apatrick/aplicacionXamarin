@@ -25,6 +25,17 @@ namespace AplicacionPatrick.Views.ViewsAccess
         private void RegisterNav_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new RegisterPage());
-        }       
+        }
+
+
+        /// <summary>
+        /// Method for button  to login user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoginNav_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginPage());
+        }
     }
 }

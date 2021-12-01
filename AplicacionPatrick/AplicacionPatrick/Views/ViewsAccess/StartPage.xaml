@@ -39,19 +39,17 @@
                             BorderWidth="1"
                             Clicked="RegisterNav_Clicked"/>
 
-                    <Button 
-                        Text="Add animal" 
-                        FontAttributes="Bold" 
-                        BackgroundColor="#4ba862" 
-                        BorderRadius="35" 
-                        TextColor="White" 
-                        HorizontalOptions="End" 
-                        WidthRequest="160" 
-                        Margin="0,0,20,22" 
-                        VerticalOptions="End"/>
-
-                    <Frame BackgroundColor="Aqua">
-                        <Button Text="No tienes una Cuenta?" HeightRequest="35" WidthRequest="185" TextColor="White" BackgroundColor="Green" FontSize="10"/>
+                  
+                    <Frame>
+                        <Button 
+                            Text="Tienes una Cuenta?"
+                            HeightRequest="35" 
+                            WidthRequest="200" 
+                            TextColor="White" 
+                            BackgroundColor="Green" 
+                            CornerRadius="30" 
+                            FontSize="10"
+                            Clicked="LoginNav_Clicked"/>
                     </Frame>
                 </StackLayout>
                 <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="4">

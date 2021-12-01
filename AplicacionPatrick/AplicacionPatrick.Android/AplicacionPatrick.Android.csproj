@@ -81,7 +81,7 @@
     <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HelloWorld\AplicacionPatrick.csproj">
+    <ProjectReference Include="..\AplicacionPatrick\AplicacionPatrick.csproj">
       <Project>{DDB9C2AA-ABD7-408A-9A49-8EDFFA899AF5}</Project>
       <Name>AplicacionPatrick</Name>
     </ProjectReference>

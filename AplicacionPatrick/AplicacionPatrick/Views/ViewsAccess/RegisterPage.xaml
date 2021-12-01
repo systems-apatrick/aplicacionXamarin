@@ -3,10 +3,160 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AplicacionPatrick.Views.ViewsAccess.RegisterPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="Start"
+                     HorizontalOptions="CenterAndExpand"                     
+                     >
+            <Grid RowSpacing="25">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center">
+                    <Label Text="Registrate a APATRICK" 
+                           TextColor="#B4995d" 
+                           FontSize="18" 
+                           WidthRequest="{OnPlatform UWP=300,Android=300,iOS=300}" 
+                           FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                    <Frame HasShadow="True" HeightRequest="45" Padding="0,1,0,0">
+                        <Entry WidthRequest="275"
+                               TextColor="#B4995d" 
+                               
+                               HeightRequest="50"
+                               Placeholder="Nombre de Usuario"
+                               FontSize="15"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Keyboard="Text"
+                               HorizontalTextAlignment="Start"
+                               MaxLength="20"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center">
+                    <Frame HasShadow="True" HeightRequest="45" Padding="0,1,0,0">
+                        <Entry WidthRequest="275"
+                               HeightRequest="50"
+                               Placeholder="Correo"
+                               FontSize="15"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Keyboard="Email"
+                               HorizontalTextAlignment="Start"
+                               MaxLength="35"/>
+                    </Frame>
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center">
+                    <Frame HasShadow="True" HeightRequest="45" Padding="0,1,0,0">
+                        <Entry WidthRequest="275"
+                               HeightRequest="50"
+                               Placeholder="Contraseña"
+                               FontSize="15"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Keyboard="Text"
+                               HorizontalTextAlignment="Start"
+                               MaxLength="20"
+                               IsPassword="True"
+                               />
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" HorizontalOptions="Center" Orientation="Horizontal">
+                    <Frame HasShadow="True" HeightRequest="45" Padding="0,1,0,0">
+                        <Entry WidthRequest="134"
+                               HeightRequest="50"
+                               Placeholder="Primer Nombre"
+                               FontSize="15"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Keyboard="Text"
+                               HorizontalTextAlignment="Start"
+                               MaxLength="20"
+                               />
+                    </Frame>
+                    <Frame HasShadow="True" HeightRequest="45" Padding="0,1,0,0">
+                        <Entry WidthRequest="134"
+                               HeightRequest="50"
+                               Placeholder="Segundo Nombre"
+                               FontSize="15"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Keyboard="Text"
+                               HorizontalTextAlignment="Start"
+                               MaxLength="20"
+                               />
+
+                    </Frame>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Horizontal">
+                    <Frame HasShadow="True" HeightRequest="45" Padding="0,1,0,0">
+                        <Entry WidthRequest="134"
+                               HeightRequest="50"
+                               Placeholder="Edad"
+                               FontSize="15"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Keyboard="Numeric"
+                               HorizontalTextAlignment="Start"
+                               MaxLength="20"
+                       
+                               />
+                    </Frame>
+                    <Frame HasShadow="True" 
+                           WidthRequest="134" 
+                           HeightRequest="50"
+                           Padding="0,0,0,0"
+                           Margin="{OnPlatform UWP=10}">
+                        <Picker Title="Pais" 
+                                FontSize="16"
+                                WidthRequest="{OnPlatform UWP=146,Android=123, iOS=146}"
+                                HorizontalOptions="Center">
+                            <Picker.ItemsSource>
+                                <x:Array  Type="{x:Type x:String}">
+                                    <x:String>Ecuador</x:String>
+                                    <x:String>Peru</x:String>
+                                    <x:String>Colombia</x:String>
+                                    <x:String>Mexico</x:String>
+                                    <x:String>Brasil</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="7"
+                             WidthRequest="275" 
+                             HorizontalOptions="Center" 
+                             Orientation="Horizontal"
+                             Margin="15">
+                    <Frame Padding="0,4,0,4" HasShadow="True">
+                        <Button Text="Registrarme" 
+                                HeightRequest="35"
+                                TextColor="#B4995d" 
+                                BackgroundColor="White"
+                                FontSize="12"
+                                FontAttributes="Bold"/>
+                    </Frame>
+                    <ActivityIndicator Color="#B4995D"/>
+                </StackLayout>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
